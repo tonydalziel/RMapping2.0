@@ -1,0 +1,119 @@
+lints.workspace = true
+
+[package]
+name = "martin"
+# Once the release is published with the hash, update https://github.com/maplibre/homebrew-martin
+version = "0.13.0"
+authors = ["Stepan Kuzmin <to.stepan.kuzmin@gmail.com>", "Yuri Astrakhan <YuriAstrakhan@gmail.com>", "MapLibre contributors"]
+description = "Blazing fast and lightweight tile server with PostGIS, MBTiles, and PMTiles support"
+keywords = ["maps", "tiles", "mbtiles", "pmtiles", "postgis"]
+categories = ["science::geo", "web-programming::http-server"]
+exclude = [
+    # Tests include a lot of data and other test files that are not needed for the users of the library
+    "/tests",
+]
+default-run = "martin"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+homepage.workspace = true
+
+[package.metadata.deb]
+name = "martin"
+revision = ""
+maintainer = "Yuri Astrakhan <YuriAstrakhan@gmail.com>, Stepan Kuzmin <to.stepan.kuzmin@gmail.com>, MapLibre contributors"
+maintainer-scripts = "../debian"
+depends = "$auto"
+assets = [
+    ["target/release/martin", "/usr/bin/martin", "755"],
+    ["target/release/martin-cp", "/usr/bin/martin-cp", "755"],
+    ["target/release/mbtiles", "/usr/bin/mbtiles", "755"],
+    ["../README.md", "/usr/share/doc/martin/README.md", "644"],
+    ["../debian/config.yaml", "/usr/share/doc/martin/config.yaml", "644"],
+    ["../debian/config.yaml", "/usr/local/etc/martin/config.yaml", "644"],
+]
+
+# see https://github.com/kornelski/cargo-deb/blob/main/systemd.md#packagemetadatadebsystemd-units-options
+[package.metadata.deb.systemd-units]
+unit-scripts = "../debian/"
+enable = false
+start = false
+restart-after-upgrade = false
+stop-on-upgrade = true
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "martin"
+path = "src/bin/martin.rs"
+
+[[bin]]
+name = "martin-cp"
+path = "src/bin/martin-cp.rs"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[features]
+default = ["fonts", "mbtiles", "pmtiles", "postgres", "sprites"]
+fonts = ["dep:bit-set", "dep:pbf_font_tools"]
+mbtiles = []
+pmtiles = []
+postgres = ["dep:deadpool-postgres", "dep:json-patch", "dep:postgis", "dep:postgres", "dep:postgres-protocol", "dep:semver", "dep:tokio-postgres-rustls"]
+sprites = ["dep:spreet"]
+bless-tests = []
+
+[dependencies]
+actix-cors.workspace = true
+actix-http.workspace = true
+actix-rt.workspace = true
+actix-web.workspace = true
+async-trait.workspace = true
+bit-set = { workspace = true, optional = true }
+brotli.workspace = true
+clap.workspace = true
+deadpool-postgres = { workspace = true, optional = true }
+env_logger.workspace = true
+flate2.workspace = true
+futures.workspace = true
+itertools.workspace = true
+json-patch = { workspace = true, optional = true }
+log.workspace = true
+martin-tile-utils.workspace = true
+mbtiles.workspace = true
+moka.workspace = true
+num_cpus.workspace = true
+pbf_font_tools = { workspace = true, optional = true }
+pmtiles.workspace = true
+postgis = { workspace = true, optional = true }
+postgres-protocol = { workspace = true, optional = true }
+postgres = { workspace = true, optional = true }
+regex.workspace = true
+reqwest.workspace = true
+rustls-native-certs.workspace = true
+rustls-pemfile.workspace = true
+rustls.workspace = true
+semver = { workspace = true, optional = true }
+serde.workspace = true
+serde_json.workspace = true
+serde_with.workspace = true
+serde_yaml.workspace = true
+spreet = { workspace = true, optional = true }
+subst.workspace = true
+thiserror.workspace = true
+tilejson.workspace = true
+tokio = { workspace = true, features = ["io-std"] }
+tokio-postgres-rustls = { workspace = true, optional = true }
+url.workspace = true
+
+[dev-dependencies]
+cargo-husky.workspace = true
+criterion.workspace = true
+ctor.workspace = true
+indoc.workspace = true
+insta = { workspace = true, features = ["yaml"] }
+pprof.workspace = true

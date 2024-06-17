@@ -1,8 +1,8 @@
 [package]
 name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+version = "2.1.0"
+description = ""
+authors = ["TD"]
 license = ""
 repository = ""
 default-run = "app"
@@ -31,4 +31,4 @@ tauri-plugin-localhost = "0.1.0"
 custom-protocol = [ "tauri/custom-protocol" ]
 
 [patch.crates-io]
-martin = { git = 'https://github.com/maplibre/martin' }
+martin = { path = "../martin-0.13.0-local" }
