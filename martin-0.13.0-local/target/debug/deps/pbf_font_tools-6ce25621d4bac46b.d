@@ -1,0 +1,13 @@
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/deps/libpbf_font_tools-6ce25621d4bac46b.rmeta: /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/lib.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/error.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/proto/mod.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/tools.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/ft_generate.rs /Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out/protos/mod.rs /Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out/protos/glyphs.rs
+
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/deps/pbf_font_tools-6ce25621d4bac46b.d: /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/lib.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/error.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/proto/mod.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/tools.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/ft_generate.rs /Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out/protos/mod.rs /Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out/protos/glyphs.rs
+
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/lib.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/error.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/proto/mod.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/tools.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pbf_font_tools-2.5.0/src/ft_generate.rs:
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out/protos/mod.rs:
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out/protos/glyphs.rs:
+
+# env-dep:OUT_DIR=/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/pbf_font_tools-cbd2c62718b06ca0/out

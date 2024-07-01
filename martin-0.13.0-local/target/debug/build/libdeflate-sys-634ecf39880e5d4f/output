@@ -1,0 +1,69 @@
+TARGET = Some("aarch64-apple-darwin")
+OPT_LEVEL = Some("0")
+HOST = Some("aarch64-apple-darwin")
+cargo:rerun-if-env-changed=CC_aarch64-apple-darwin
+CC_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CC_aarch64_apple_darwin
+CC_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("aes,crc,dit,dotprod,dpb,dpb2,fcma,fhm,flagm,fp16,frintts,jsconv,lor,lse,neon,paca,pacg,pan,pmuv3,ras,rcpc,rcpc2,rdm,sb,sha2,sha3,ssbs,vh")
+cargo:rerun-if-env-changed=CFLAGS_aarch64-apple-darwin
+CFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_apple_darwin
+CFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/arm/cpu_features.o" "-c" "libdeflate/lib/arm/cpu_features.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/x86/cpu_features.o" "-c" "libdeflate/lib/x86/cpu_features.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/adler32.o" "-c" "libdeflate/lib/adler32.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/crc32.o" "-c" "libdeflate/lib/crc32.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/deflate_compress.o" "-c" "libdeflate/lib/deflate_compress.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/deflate_decompress.o" "-c" "libdeflate/lib/deflate_decompress.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/gzip_compress.o" "-c" "libdeflate/lib/gzip_compress.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/gzip_decompress.o" "-c" "libdeflate/lib/gzip_decompress.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/utils.o" "-c" "libdeflate/lib/utils.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/zlib_compress.o" "-c" "libdeflate/lib/zlib_compress.c"
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "libdeflate" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/zlib_decompress.o" "-c" "libdeflate/lib/zlib_decompress.c"
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_aarch64-apple-darwin
+AR_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=AR_aarch64_apple_darwin
+AR_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64-apple-darwin
+ARFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64_apple_darwin
+ARFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: ZERO_AR_DATE="1" "ar" "cq" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate.a" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/arm/cpu_features.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/x86/cpu_features.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/adler32.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/crc32.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/deflate_compress.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/deflate_decompress.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/gzip_compress.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/gzip_decompress.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/utils.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/zlib_compress.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate/lib/zlib_decompress.o"
+exit status: 0
+running: "ar" "s" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib/libdeflate.a"
+exit status: 0
+cargo:rustc-link-lib=static=deflate
+cargo:rustc-link-search=native=/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/lib
+cargo:root=/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out
+cargo:include=/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/libdeflate-sys-634ecf39880e5d4f/out/include

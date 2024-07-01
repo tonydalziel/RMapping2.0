@@ -1,5 +1,5 @@
 import * as turf from '@turf/turf';
-import type { FeatureCollection, Polygon, Feature, LineString, Point, Position, GeoJsonProperties, MultiPoint, MultiPolygon } from 'geojson';
+import type { FeatureCollection, Polygon, Feature, LineString, Point, Position, GeoJsonProperties, MultiPolygon, BBox } from 'geojson';
 import type { CatchResults2g, CatchResults4g, CatchResults } from '$lib/classes/results';
 import mapboxgl from 'mapbox-gl';
 import type { GeoJSONSource } from 'mapbox-gl';
@@ -29,7 +29,7 @@ type Samples = Sample2g | Sample4g;
 type IMSI = string;
 
 interface Device {
-	imsi: string;
+	imsi: IMSI;
 	imei: string;
 	predicted_lat: number | null;
 	predicted_lon: number | null;
@@ -54,7 +54,7 @@ export class MapData {
     grids: Record<string, [FeatureCollection<Polygon, {intensity: number, devices: Record<string,number>}>, Feature<Point>]>;
     filteredGrids: Record<string, [FeatureCollection<Polygon, {intensity: number, devices: Record<string,number>}>]>;
     gridSize: number; // Size of the grid (degrees)
-    currentGridCoords: Feature<Point> | null; // Coordinates of the current grid
+    gridCoverage: Feature<Polygon|MultiPolygon, GeoJsonProperties> | null; 
     gridLookUp: Feature<Point,GeoJsonProperties>[];
     gridMaxHeat: number = 10; // Maximum heat value for the grid
     gridMaxHeatTimeout: NodeJS.Timeout | null = null; // Timeout to update the grid max heat value
@@ -79,7 +79,7 @@ export class MapData {
         this.followPath = false;
         this.grids = {};
         this.filteredGrids = {};
-        this.currentGridCoords = null;
+        this.gridCoverage = null;
 
         this.timeThreshold = 5 * 60 ; // 5 minutes
         this.distanceThreshold = 1; // 1000 meters
@@ -176,7 +176,36 @@ export class MapData {
         this.#updateFlightPath(hit.lat, hit.lon, hit.time);
 
         // Update the relevant device prediction
-        this.#updateDevicePredictions(hit.raw.imsi);
+        this.#updateDevicePrediction(hit.raw.imsi);
+    }
+
+    #updateGridPoints(newSearchBuffer: Feature<Polygon|MultiPolygon, GeoJsonProperties>){
+        // Check if either no grid is present or the new search buffer is not within the current grid
+        if(this.gridCoverage == null || !turf.booleanWithin(newSearchBuffer, this.gridCoverage)){
+            console.log("again!");
+            // Find the bbox of the new search buffer
+            const bbox: BBox = turf.bbox(newSearchBuffer);
+            
+            // Snap the bbox to the grid
+            bbox[0] = this.#snapToGrid(bbox[0], this.gridSize);
+            bbox[1] = this.#snapToGrid(bbox[1], this.gridSize);
+            bbox[2] = this.#snapToGrid(bbox[2], this.gridSize, false);
+            bbox[3] = this.#snapToGrid(bbox[3], this.gridSize, false);
+
+            const currentGridCoords = Object.values(this.grids).map((grid) => grid[1]);
+
+            // Generate all the grid bboxes that are within the new bbox
+            for (let lat = bbox[1]; lat < bbox[3]; lat += this.gridSize){
+                for (let lon = bbox[0]; lon < bbox[2]; lon += this.gridSize){
+                    // Push the bbox if it has not been previouly generated
+                    if (!currentGridCoords.some((coord) => coord.geometry.coordinates[0] == lon && coord.geometry.coordinates[1] == lat)){
+                        this.#initialiseGrid(lat, lon);
+                    }
+                }
+            }
+            
+        }
+
     }
 
     // Update the intensity of visible grid squares
@@ -199,6 +228,8 @@ export class MapData {
                 searchBuffer = turf.difference(turf.featureCollection([searchBuffer, minSearchBuffer]))?? searchBuffer;
             }
         }
+
+        this.#updateGridPoints(searchBuffer);
 
         const points = turf.pointsWithinPolygon(
 			turf.featureCollection(this.gridLookUp),
@@ -246,7 +277,7 @@ export class MapData {
     }
 
     // Update device predictions
-    #updateDevicePredictions(imsi:string){
+    #updateDevicePrediction(imsi:string){
         const intersection = this.#findIntersection(imsi);
 
         if (intersection){
@@ -310,8 +341,11 @@ export class MapData {
     }
 
     // Snap a coordinate to the nearest grid
-    #snapToGrid(coord:number, size:number) {
-        return Math.floor(coord / size) * size;
+    #snapToGrid(coord:number, size:number, floor:boolean = true) {
+        if (floor)
+            return Math.floor(coord / size) * size;
+        else
+            return Math.ceil(coord / size) * size;
     }
 
     // Initialise a new hex grid
@@ -326,6 +360,13 @@ export class MapData {
         const gridId = `grid-${minLon.toFixed(4)}-${minLat.toFixed(4)}`;
 
         const bbox: [number,number,number,number] = [minLon, minLat, maxLon, maxLat];
+        
+        // Add this bbox to the grid as a square to the coverage polygon
+        if (this.gridCoverage === null){
+            this.gridCoverage = turf.bboxPolygon(bbox);
+        } else {
+            this.gridCoverage = turf.union(turf.featureCollection([this.gridCoverage, turf.bboxPolygon(bbox)]));
+        }
 
         // Create a hexagonal grid that covers the buffer
 		this.grids[gridId] = [turf.squareGrid(bbox, 0.02, {
@@ -337,8 +378,6 @@ export class MapData {
 			units: 'kilometers',
 			properties: { intensity: 0, devices: {} }
 		})];
-
-        this.currentGridCoords = this.grids[gridId][1];
 
         const midPoints: Feature<Point,GeoJsonProperties>[] = this.grids[gridId][0].features.map((feature, index) => {
             const centrePoint = turf.centroid(feature);
@@ -373,32 +412,6 @@ export class MapData {
         } else {
             this.flightPath[this.flightPath.length-1].geometry.coordinates.push([lon, lat]);
             this.lastUpdate = time;
-        }
-
-        if (Object.keys(this.grids).length === 0 || this.currentGridCoords === null){
-            this.#initialiseGrid(lat, lon);
-        } else {
-            // If the new lat,lon isn't inside the current bounding box, check all other bounding boxes.
-            // If the new lat,lon is inside a bounding box, update the current bounding box to this one
-            // If it isn't inside any bounding box, create a new grid that is in line with the previous bounding box
-            const point = turf.point([this.#snapToGrid(lon, this.gridSize), this.#snapToGrid(lat, this.gridSize)]);
-            let found = false;
-
-            // Check if the new point snaps to the current grid bbox
-            if (
-                turf.distance(point, this.currentGridCoords, {units: 'degrees'}) > (this.gridSize / 3)
-            ){
-                for (const grid in this.grids){
-                    if (turf.distance(point, this.grids[grid][1], {units: 'degrees'}) < (this.gridSize / 3)){
-                        found = true;
-                        this.currentGridCoords = this.grids[grid][1];
-                        break;
-                    }
-                } 
-                if(!found){
-                    this.#initialiseGrid(lat, lon);
-                }
-            }
         }
     }
 
@@ -634,6 +647,29 @@ export class MapData {
         if (Object.keys(this.displayedData).length > 0){
             this.#addDevicePredictionsToMap(map, layers, sources);
         }
+
+        // Add a fill layer to visualise the gridCoverage
+        if (this.gridCoverage){
+            if (!sources.includes('heatmap-grid-coverage')) {
+                map.addSource('grid-coverage', {
+                    type: 'geojson',
+                    data: this.gridCoverage
+                });
+            }
+
+            if (!layers.includes('heatmap-grid-coverage')) {
+                map.addLayer({
+                    id: 'heatmap-grid-coverage',
+                    source: 'grid-coverage',
+                    type: 'fill',
+                    paint: {
+                        'fill-color': 'rgba(0,0,0,0)',
+                        'fill-outline-color': 'red',
+                        'fill-opacity': 0.5
+                    }
+                });
+            }
+        }
     }
 
     // Remove all heatmap-layers / sources from the map
@@ -791,6 +827,16 @@ export class MapData {
             }
         } catch {
             this.#addDevicePredictionsToMap(map, layers, sources);
+        }
+
+        // Add the grid coverage
+        try {
+            if (this.gridCoverage){
+                console.log("adding it!");
+                (map.getSource('grid-coverage') as GeoJSONSource).setData(this.gridCoverage);
+            }
+        } catch {
+            this.checkLayers(map);
         }
     }
 }

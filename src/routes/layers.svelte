@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
+    import RefreshIcon from "$lib/icons/refresh.svelte"
+
     import type mapboxgl from "mapbox-gl";
 
     export let map: mapboxgl.Map;
@@ -46,7 +47,7 @@
     <h1 class="text-lg font-bold text-slate-900 ml-3">Layers</h1>
     <button class="p-1 mx-3 bg-slate-400 text-slate-900 rounded-md hover:bg-slate-500 transition-all duration-200"
     on:click={updateLayers}>
-        <Icon icon="material-symbols:refresh" class="w-4 h-4" />
+        <RefreshIcon svgClasses={["w-4", "h-4"]} />
     </button>
 </div>
 <hr class="border-slate-400 w-full" />

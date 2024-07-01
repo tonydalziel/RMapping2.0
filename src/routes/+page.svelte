@@ -1,9 +1,13 @@
 <script lang="ts">
+    import DroneIcon from '$lib/icons/drone.svelte';
+    import SimIcon from '$lib/icons/sim.svelte';
+    import LayersIcon from '$lib/icons/layers.svelte';
+    import SettingsAdjust from '$lib/icons/settings-adjust.svelte';
+
     import mapboxgl from 'mapbox-gl';
     import { onMount } from 'svelte';
     import "mapbox-gl-style-switcher/styles.css";
     import { MapData } from '$lib/heatmap';
-    import Icon from '@iconify/svelte';
     import Settings from './settings.svelte';
     import StyleSwitcher from './style-switcher.svelte';
     import LayerToggle from './layers.svelte';
@@ -44,7 +48,7 @@
                 const interval = setInterval(() => {
                     // Continually add data to the heatmap then update the source every 1 second
                     // When the end of the data is reached, start over clearing the current data
-                    if (index >= currentData.length) {
+                    if (index >= 10) {
                         index = 0;
                         clearInterval(interval);
                     }
@@ -131,22 +135,22 @@
                 class:border-2={snapToDrone}
                 class:border-blue-700={snapToDrone}
                 on:click={()=>{snapToDrone = mapData.snapToDrone(map)}}>
-                    <Icon icon="ph:drone" class="w-full h-full" />
+                    <DroneIcon svgClasses={["h-full mx-auto py-1"]}/>
                 </button>
     
                 <button class="py-1 px-4 h-10 w-20 m-2 rounded-md shadow-md hover:scale-105 transition-all bg-blue-200"
                 on:click={()=>{devicesOpen = !devicesOpen}}>
-                    <Icon icon="bi:sim" class="w-full h-full" />
+                    <SimIcon svgClasses={["h-full mx-auto py-1"]}/>
                 </button>
 
                 <button class="py-1 px-4 h-10 w-20 m-2 rounded-md shadow-md hover:scale-105 transition-all bg-blue-200"
                 on:click={()=>{layersOpen = !layersOpen}}>
-                    <Icon icon="material-symbols:layers" class="w-full h-full" />
+                    <LayersIcon svgClasses={["h-full mx-auto py-1"]}/>
                 </button>
 
                 <button class="py-1 px-4 h-10 w-20 m-2 rounded-md shadow-md hover:scale-105 transition-all bg-blue-200"
                 on:click={()=>{settingsOpen = true}}>
-                    <Icon icon="carbon:settings-adjust" class="w-full h-full"/>
+                    <SettingsAdjust svgClasses={["h-full mx-auto py-1"]}/>
                 </button>
 
                 <Upload bind:currentData={currentData} on:newUpload={newUpload}/>

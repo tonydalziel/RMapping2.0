@@ -1,0 +1,11 @@
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/deps/libconvert_case-d284928fa1628c0e.rmeta: /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/lib.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/case.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/converter.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/pattern.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/segmentation.rs
+
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/deps/libconvert_case-d284928fa1628c0e.rlib: /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/lib.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/case.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/converter.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/pattern.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/segmentation.rs
+
+/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/deps/convert_case-d284928fa1628c0e.d: /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/lib.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/case.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/converter.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/pattern.rs /Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/segmentation.rs
+
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/lib.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/case.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/converter.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/pattern.rs:
+/Users/tonyd/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.6.0/src/segmentation.rs:

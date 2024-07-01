@@ -1,8 +1,9 @@
 <script lang="ts">
+    import UploadIcon from '$lib/icons/upload.svelte';
+    import TrashIcon from '$lib/icons/trash.svelte';
 
     import { slide } from "svelte/transition";
     import { createEventDispatcher, onMount } from "svelte";
-    import Icon from "@iconify/svelte";
     import { open } from '@tauri-apps/api/dialog';
     import { invoke } from '@tauri-apps/api/tauri';
 
@@ -74,14 +75,14 @@
                 <div class="flex justify-between items-center border-t-2 border-t-slate-600">
                     <h4 class="text-lg">Tile Sets:</h4>
                     <button on:click={newMbtile}>
-                        <Icon icon="carbon:upload" class="w-4 h-4" />
+                        <UploadIcon svgClasses={["w-4", "h-4"]} />
                     </button>
                 </div>
                 {#each tiles as tile}
                     <div class="flex justify-between items-center border-t-2">
                         <p>{tile}</p>
                         <button on:click={()=>removeMbtile(tile)}>
-                            <Icon icon="ph:trash" class="w-4 h-4" />
+                            <TrashIcon svgClasses={["w-4", "h-4"]} />
                         </button>
                     </div>
                 {/each}

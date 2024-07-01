@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { bands } from '$lib/assets/bands';
+    import UploadIcon from '$lib/icons/upload.svelte';
+
     import { CatchResults2g, CatchResults4g } from '$lib/classes/results';
-    import Icon from '@iconify/svelte';
     import { FileButton } from '@skeletonlabs/skeleton';
     import ExcelJS from 'exceljs';
     import { createEventDispatcher } from 'svelte';
@@ -116,5 +116,5 @@
 </script>
 
 <FileButton name="missionExports" on:change={missionExportUpload} button="py-1 px-4 h-10 w-20 m-2 rounded-md shadow-md hover:scale-105 transition-all bg-blue-200">
-    <Icon icon="material-symbols:upload" class="w-full h-full" />
+    <UploadIcon svgClasses={["h-full mx-auto py-1"]} />
 </FileButton>

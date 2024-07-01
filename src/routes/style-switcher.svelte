@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
+    import LayersIcon from '$lib/icons/layers.svelte';
+
     import type mapboxgl from "mapbox-gl";
     import { invoke } from '@tauri-apps/api/tauri';
 
@@ -100,7 +101,7 @@
     {#if !open}
         <button class="aspect-square p-1 flex justify-center items-center rounded-md shadow-md bg-[#f5f5f5] border-blue-700 border-2"
         on:click={handleClick}>
-            <Icon icon="bi:layers" class="w-6 h-6" />
+            <LayersIcon svgClasses={["w-6", "h-6"]} />
         </button>
     {:else}
         <div class="w-fit bg-[#f5f5f5] border-blue-700 border-2">

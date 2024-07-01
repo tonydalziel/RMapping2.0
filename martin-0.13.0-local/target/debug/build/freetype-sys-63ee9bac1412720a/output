@@ -1,0 +1,328 @@
+TARGET = Some("aarch64-apple-darwin")
+OPT_LEVEL = Some("0")
+HOST = Some("aarch64-apple-darwin")
+cargo:rerun-if-env-changed=CXX_aarch64-apple-darwin
+CXX_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CXX_aarch64_apple_darwin
+CXX_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CXX
+HOST_CXX = None
+cargo:rerun-if-env-changed=CXX
+CXX = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("aes,crc,dit,dotprod,dpb,dpb2,fcma,fhm,flagm,fp16,frintts,jsconv,lor,lse,neon,paca,pacg,pan,pmuv3,ras,rcpc,rcpc2,rdm,sb,sha2,sha3,ssbs,vh")
+cargo:rerun-if-env-changed=CXXFLAGS_aarch64-apple-darwin
+CXXFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CXXFLAGS_aarch64_apple_darwin
+CXXFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CXXFLAGS
+HOST_CXXFLAGS = None
+cargo:rerun-if-env-changed=CXXFLAGS
+CXXFLAGS = None
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/autofit/autofit.o" "-c" "freetype2/src/autofit/autofit.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbase.o" "-c" "freetype2/src/base/ftbase.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbbox.o" "-c" "freetype2/src/base/ftbbox.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbdf.o" "-c" "freetype2/src/base/ftbdf.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbitmap.o" "-c" "freetype2/src/base/ftbitmap.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftcid.o" "-c" "freetype2/src/base/ftcid.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftdebug.o" "-c" "freetype2/src/base/ftdebug.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftfstype.o" "-c" "freetype2/src/base/ftfstype.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftgasp.o" "-c" "freetype2/src/base/ftgasp.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftglyph.o" "-c" "freetype2/src/base/ftglyph.c"
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftgxval.o" "-c" "freetype2/src/base/ftgxval.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftinit.o" "-c" "freetype2/src/base/ftinit.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftmm.o" "-c" "freetype2/src/base/ftmm.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftotval.o" "-c" "freetype2/src/base/ftotval.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftpatent.o" "-c" "freetype2/src/base/ftpatent.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftpfr.o" "-c" "freetype2/src/base/ftpfr.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftstroke.o" "-c" "freetype2/src/base/ftstroke.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftsynth.o" "-c" "freetype2/src/base/ftsynth.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftsystem.o" "-c" "freetype2/src/base/ftsystem.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/fttype1.o" "-c" "freetype2/src/base/fttype1.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftwinfnt.o" "-c" "freetype2/src/base/ftwinfnt.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/bdf/bdf.o" "-c" "freetype2/src/bdf/bdf.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/bzip2/ftbzip2.o" "-c" "freetype2/src/bzip2/ftbzip2.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=In file included from freetype2/src/bdf/bdf.c:30:
+
+cargo:warning=freetype2/src/bdf/bdflib.c:1799:9: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+
+cargo:warning=        ft_sprintf( nbuf, "%hd", p->font->bbx.ascent );
+
+cargo:warning=        ^
+
+cargo:warning=freetype2/include/freetype/config/ftstdlib.h:120:21: note: expanded from macro 'ft_sprintf'
+
+cargo:warning=#define ft_sprintf  sprintf
+
+cargo:warning=                    ^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+
+cargo:warning=__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+
+cargo:warning=^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+
+cargo:warning=        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+
+cargo:warning=                                                      ^
+
+cargo:warning=In file included from freetype2/src/bdf/bdf.c:30:
+
+cargo:warning=freetype2/src/bdf/bdflib.c:1811:9: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+
+cargo:warning=        ft_sprintf( nbuf, "%hd", p->font->bbx.descent );
+
+cargo:warning=        ^
+
+cargo:warning=freetype2/include/freetype/config/ftstdlib.h:120:21: note: expanded from macro 'ft_sprintf'
+
+cargo:warning=#define ft_sprintf  sprintf
+
+cargo:warning=                    ^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+
+cargo:warning=__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+
+cargo:warning=^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+
+cargo:warning=        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+
+cargo:warning=                                                      ^
+
+cargo:warning=In file included from freetype2/src/bdf/bdf.c:30:
+
+cargo:warning=freetype2/src/bdf/bdflib.c:2133:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+
+cargo:warning=      ft_sprintf( nbuf, "%hd", p->font->bbx.ascent );
+
+cargo:warning=      ^
+
+cargo:warning=freetype2/include/freetype/config/ftstdlib.h:120:21: note: expanded from macro 'ft_sprintf'
+
+cargo:warning=#define ft_sprintf  sprintf
+
+cargo:warning=                    ^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+
+cargo:warning=__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+
+cargo:warning=^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+
+cargo:warning=        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+
+cargo:warning=                                                      ^
+
+cargo:warning=In file included from freetype2/src/bdf/bdf.c:30:
+
+cargo:warning=freetype2/src/bdf/bdflib.c:2141:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+
+cargo:warning=      ft_sprintf( nbuf, "%hd", p->font->bbx.descent );
+
+cargo:warning=      ^
+
+cargo:warning=freetype2/include/freetype/config/ftstdlib.h:120:21: note: expanded from macro 'ft_sprintf'
+
+cargo:warning=#define ft_sprintf  sprintf
+
+cargo:warning=                    ^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+
+cargo:warning=__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+
+cargo:warning=^
+
+cargo:warning=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+
+cargo:warning=        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+
+cargo:warning=                                                      ^
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/cache/ftcache.o" "-c" "freetype2/src/cache/ftcache.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/cff/cff.o" "-c" "freetype2/src/cff/cff.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=4 warnings generated.
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/cid/type1cid.o" "-c" "freetype2/src/cid/type1cid.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/gzip/ftgzip.o" "-c" "freetype2/src/gzip/ftgzip.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/lzw/ftlzw.o" "-c" "freetype2/src/lzw/ftlzw.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/pcf/pcf.o" "-c" "freetype2/src/pcf/pcf.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/pfr/pfr.o" "-c" "freetype2/src/pfr/pfr.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/psaux/psaux.o" "-c" "freetype2/src/psaux/psaux.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/pshinter/pshinter.o" "-c" "freetype2/src/pshinter/pshinter.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/psnames/psnames.o" "-c" "freetype2/src/psnames/psnames.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/raster/raster.o" "-c" "freetype2/src/raster/raster.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/sdf/sdf.o" "-c" "freetype2/src/sdf/sdf.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/svg/svg.o" "-c" "freetype2/src/svg/svg.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/sfnt/sfnt.o" "-c" "freetype2/src/sfnt/sfnt.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/smooth/smooth.o" "-c" "freetype2/src/smooth/smooth.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/truetype/truetype.o" "-c" "freetype2/src/truetype/truetype.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/type1/type1.o" "-c" "freetype2/src/type1/type1.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/type42/type42.o" "-c" "freetype2/src/type42/type42.c"
+running: env -u IPHONEOS_DEPLOYMENT_TARGET "c++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-2" "-fno-omit-frame-pointer" "-arch" "arm64" "-I" "." "-I" "freetype2/include" "-I" "freetype2/src" "-DFT2_BUILD_LIBRARY" "-o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/winfonts/winfnt.o" "-c" "freetype2/src/winfonts/winfnt.c"
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+cargo:warning=clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_aarch64-apple-darwin
+AR_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=AR_aarch64_apple_darwin
+AR_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64-apple-darwin
+ARFLAGS_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=ARFLAGS_aarch64_apple_darwin
+ARFLAGS_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: ZERO_AR_DATE="1" "ar" "cq" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/libfreetype2.a" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/autofit/autofit.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbase.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbbox.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbdf.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftbitmap.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftcid.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftdebug.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftfstype.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftgasp.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftglyph.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftgxval.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftinit.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftmm.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftotval.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftpatent.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftpfr.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftstroke.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftsynth.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftsystem.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/fttype1.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/base/ftwinfnt.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/bdf/bdf.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/bzip2/ftbzip2.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/cache/ftcache.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/cff/cff.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/cid/type1cid.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/gzip/ftgzip.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/lzw/ftlzw.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/pcf/pcf.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/pfr/pfr.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/psaux/psaux.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/pshinter/pshinter.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/psnames/psnames.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/raster/raster.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/sdf/sdf.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/svg/svg.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/sfnt/sfnt.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/smooth/smooth.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/truetype/truetype.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/type1/type1.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/type42/type42.o" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/freetype2/src/winfonts/winfnt.o"
+exit status: 0
+running: "ar" "s" "/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out/libfreetype2.a"
+exit status: 0
+cargo:rustc-link-lib=static=freetype2
+cargo:rustc-link-search=native=/Users/tonyd/Documents/Revector/rmaps2.1/martin-0.13.0-local/target/debug/build/freetype-sys-63ee9bac1412720a/out
+cargo:rerun-if-env-changed=CXXSTDLIB_aarch64-apple-darwin
+CXXSTDLIB_aarch64-apple-darwin = None
+cargo:rerun-if-env-changed=CXXSTDLIB_aarch64_apple_darwin
+CXXSTDLIB_aarch64_apple_darwin = None
+cargo:rerun-if-env-changed=HOST_CXXSTDLIB
+HOST_CXXSTDLIB = None
+cargo:rerun-if-env-changed=CXXSTDLIB
+CXXSTDLIB = None
+cargo:rustc-link-lib=c++
